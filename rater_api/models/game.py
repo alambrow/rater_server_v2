@@ -8,4 +8,3 @@ class Game(models.Model):
     number_of_players = models.IntegerField()
     est_time = models.CharField(max_length=20)
     age_rec = models.CharField(max_length=100)
-    player = models.ForeignKey("Player", on_delete=CASCADE)

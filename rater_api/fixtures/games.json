@@ -8,8 +8,8 @@
             "designer": "Hasbro?",
             "number_of_players": 2,
             "est_time": "1 Hour",
-            "age_rec": "12+",
-            "player_id": 1
+            "age_rec": "12+"
+         
         }
     },
     {
@@ -21,8 +21,8 @@
             "designer": "Hasbro?",
             "number_of_players": 2,
             "est_time": "1 Hour",
-            "age_rec": "12+",
-            "player_id": 1
+            "age_rec": "12+"
+   
         }
     }
 ]

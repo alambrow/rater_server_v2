@@ -2,5 +2,14 @@
     "python.linting.enabled": true,
     "python.linting.pylintArgs": [
         "--load-plugins=pylint_django", "--django-settings-module=v2-server.settings",
-    ],  
+    ],
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "rater_db",
+            "database": "db.sqlite3"
+        }
+    ],
+    
 }
