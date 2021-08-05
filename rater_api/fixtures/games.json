@@ -1,0 +1,28 @@
+[
+    {
+        "model": "rater_api.game",
+        "pk": 1,
+        "fields": {
+            "title": "Stratego",
+            "description": "One on one war strategy",
+            "designer": "Hasbro?",
+            "number_of_players": 2,
+            "est_time": "1 Hour",
+            "age_rec": "12+",
+            "player_id": 1
+        }
+    },
+    {
+        "model": "rater_api.game",
+        "pk": 2,
+        "fields": {
+            "title": "Stratego",
+            "description": "One on one war strategy",
+            "designer": "Hasbro?",
+            "number_of_players": 2,
+            "est_time": "1 Hour",
+            "age_rec": "12+",
+            "player_id": 1
+        }
+    }
+]
