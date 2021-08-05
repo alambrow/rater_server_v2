@@ -1,7 +1,7 @@
 {
     "python.linting.enabled": true,
     "python.linting.pylintArgs": [
-        "--load-plugins=pylint_django", "--django-settings-module=v2-server.settings",
+        "--load-plugins=pylint_django", "--django-settings-module=rater_api.settings",
     ],
     "sqltools.connections": [
         {
