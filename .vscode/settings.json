@@ -1,0 +1,9 @@
+{
+    "python.linting.enabled": true,
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django"
+    ],
+    "python.linting.pylintArgs": [
+        "--django-settings-module=v2-server.settings",
+    ],    
+}
