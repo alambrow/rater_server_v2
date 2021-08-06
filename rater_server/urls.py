@@ -15,13 +15,14 @@ Including another URLconf
 """
 
 from rest_framework import routers
-
 from django.conf.urls import include
 from django.urls import path
 from rater_api.views import GameView, register_user, login_user
+from rater_api.views.categories import CategoryView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'games', GameView, 'game')
+router.register(r'categories', CategoryView, 'category')
 
 urlpatterns = [
     path('', include(router.urls)),

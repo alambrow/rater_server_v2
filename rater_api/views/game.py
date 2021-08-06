@@ -4,6 +4,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from rater_api.models.game import Game
+from rater_api.models.category import Category
 
 class GameView(ViewSet):
 
@@ -35,6 +36,9 @@ class GameView(ViewSet):
         game.est_time = request.data["est_time"]
         game.age_rec = request.data["age_rec"]
 
+        cat = Category.objects.get(pk=request.data["category"])
+        game.category = cat
+
         try:
             game.save()
             serializer = GameSerializer(game, context={'request': request})
@@ -46,4 +50,5 @@ class GameView(ViewSet):
 class GameSerializer(serializers.ModelSerializer):
     class Meta:
         model = Game
-        fields = ('id', 'title', 'description', 'designer', 'number_of_players', 'est_time', 'age_rec')
+        fields = '__all__'
+        depth = 1
