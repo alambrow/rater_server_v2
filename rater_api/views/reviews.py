@@ -8,12 +8,19 @@ from rater_api.models import Review, Player, Game
 class ReviewView(ViewSet):
    
     def list(self, request):
-        reviews = Review.objects.all()
+        # reviews = Review.objects.all()
 
-        # gameId = self.request.query_params.get(None)
+        # game = self.request.query_params.get('game', None)
 
-        # if gameId is not None:
-        #     reviews = reviews.filter(game=gameId)
+        # if game is not None:
+        #     reviews = reviews.filter(game=game)
+        
+        game = self.request.query_params.get('game', None)
+
+        if game:
+            reviews = Review.objects.filter(game=game)
+        else:
+            reviews = Review.objects.all()
 
         serializer = ReviewSerializer(
             reviews, many=True, context={'request': request}
