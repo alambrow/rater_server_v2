@@ -1,0 +1,29 @@
+[
+    {
+        "model": "rater_api.review",
+        "pk": 1,
+        "fields": {
+            "game": 1,
+            "player": 1,
+            "review": "Really liked it"
+        }
+    },
+    {
+        "model": "rater_api.review",
+        "pk": 2,
+        "fields": {
+            "game": 1,
+            "player": 1,
+            "review": "Really liked it"
+        }
+    },
+    {
+        "model": "rater_api.review",
+        "pk": 3,
+        "fields": {
+            "game": 1,
+            "player": 1,
+            "review": "Really liked it"
+        }
+    }
+]
