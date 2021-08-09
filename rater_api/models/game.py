@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models.deletion import CASCADE
+from .game_rating import GameRating
 
 class Game(models.Model):
     title = models.CharField(max_length=100)
@@ -9,3 +10,17 @@ class Game(models.Model):
     est_time = models.CharField(max_length=20)
     age_rec = models.CharField(max_length=100)
     category = models.ForeignKey("Category", on_delete=CASCADE)
+
+    @property
+    def average_rating(self):
+        """Average rating calculated attribute for each game"""
+        ratings = GameRating.objects.filter(game=self)
+
+        # Sum all of the ratings for the game
+        total_rating = 0
+        avg_rating = 0
+        rattattat =0
+        for rating in ratings:
+            total_rating += rating.rating
+        avg_rating = total_rating / len(ratings)
+        return rattattat
