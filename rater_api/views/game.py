@@ -1,3 +1,4 @@
+from rater_api.models.game_rating import GameRating
 from django.http.response import HttpResponseServerError
 from rest_framework.exceptions import ValidationError
 from rest_framework.viewsets import ViewSet
@@ -50,5 +51,5 @@ class GameView(ViewSet):
 class GameSerializer(serializers.ModelSerializer):
     class Meta:
         model = Game
-        fields = '__all__'
+        fields = ('id', 'title', 'description', 'designer', 'number_of_players', 'est_time', 'age_rec', 'category', 'average_rating')
         depth = 1
